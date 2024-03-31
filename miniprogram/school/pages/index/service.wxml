@@ -1,0 +1,137 @@
+<view class="main main-home">
+
+	<view class="upper margin-top">
+	<!--menu1 begin-->
+	<view class="comm-list grid col-4 no-border shadow ">
+			<view class="item-title">校园直通车</view>
+			<view class="item" bindtap="url" data-url="../news/news_index?cate=0">
+				<view class="item-circle bg-green">
+					<image src="../../images/menu/board.png"></image>
+				</view>
+				<text>学校公告</text>
+			</view>
+			<view class="item" bindtap="url" data-url="../news/news_index?cate=1">
+				<view class="item-circle bg-blue">
+					<image src="../../images/menu/fenguang.png"></image>
+				</view>
+				<text>服务通知</text>
+			</view>
+
+			<view class="item" bindtap="url" data-url="../news/news_index?cate=2">
+				<view class="item-circle bg-red">
+					<image src="../../images/menu/xinwen.png"></image>
+				</view>
+				<text>校园新闻</text>
+			</view>
+
+			<view class="item" bindtap="url" data-url="../news/news_index?cate=3">
+				<view class="item-circle bg-blue">
+					<image src="../../images/menu/fenguang.png"></image>
+				</view>
+				<text>校园风光</text>
+			</view> 
+
+		  
+			<view class="item" bindtap="url" data-url="../news/news_index?cate=4">
+				<view class="item-circle bg-orange">
+					<image src="../../images/menu/huodong.png"></image>
+				</view>
+				<text>校园活动</text>
+			</view>
+
+			<view class="item" bindtap="url" data-url="../news/news_index?cate=5">
+				<view class="item-circle bg-yellow">
+					<image src="../../images/menu/xiaoli.png"></image>
+				</view>
+				<text>校历</text>
+			</view> 
+		</view>
+		<!--menu1 END -->
+
+		<!--menu2 begin-->
+		<view class="comm-list grid col-4 no-border shadow">
+			<view class="item-title">综合查询</view>
+			<view class="item" bindtap="url" data-url="../news/news_index?cate=10">
+				<view class="item-circle bg-olive">
+					<image src="../../images/menu/jiaoshi.png"></image>
+				</view>
+				<text>空闲教室</text>
+			</view>
+
+			<view class="item" bindtap="url" data-url="../news/news_index?cate=6">
+				<view class="item-circle bg-green">
+					<image src="../../images/menu/kebiao.png"></image>
+				</view>
+				<text>课程表</text>
+			</view>
+
+			 
+
+		</view>
+		<!--menu2 END -->
+
+
+		<!--menu3 begin-->
+		<view class="comm-list grid col-4 no-border shadow">
+			<view class="item-title">数据应用</view>
+			<view class="item" bindtap="url" data-url="../news/news_index?cate=11">
+				<view class="item-circle bg-cyan">
+					<image src="../../images/menu/jieyue.png"></image>
+				</view>
+				<text>借阅报告</text>
+			</view>
+
+			 
+
+		 
+
+			<view class="item" bindtap="url" data-url="../news/news_index?cate=8">
+				<view class="item-circle bg-mauve">
+					<image src="../../images/menu/yinxin.png"></image>
+				</view>
+				<text>迎新服务</text>
+			</view>
+
+		</view>
+		<!--menu3 END -->
+
+
+		<!--menu4 begin-->
+		<view class="comm-list grid col-4 no-border shadow">
+			<view class="item-title">校园服务</view>
+			<view class="item" bindtap="url" data-url="../news/news_index?cate=7">
+				<view class="item-circle bg-brown">
+					<image src="../../images/menu/shiwu.png"></image>
+				</view>
+				<text>失物招领</text>
+			</view>
+
+			<view class="item" bindtap="url" data-url="../news/news_index?cate=9">
+				<view class="item-circle bg-pink">
+					<image src="../../images/menu/wenjuan.png"></image>
+				</view>
+				<text>问卷调查</text>
+			</view>
+
+		 
+
+		 
+
+		</view>
+		<!--menu4 END -->
+
+	</view>
+
+	<view class="main-list">
+
+	</view>
+
+	<import src="../../ccmini-tpls/public/footer_tpl.wxml" />
+	<template is="footerTpl" data="{{page:'index_home', setup}}" />
+</view>
+
+<import src="../../ccmini-tpls/public/menu_tpl.wxml" />
+<template is="menuTpl"  data="{{setup, curMenu:'service'}}" />
+
+<import src="../../ccmini-tpls/public/menu_tpl.wxml" />
+<template is="menuTpl" data="{{setup, curMenu:'service'}}" />

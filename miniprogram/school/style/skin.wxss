@@ -1,0 +1,87 @@
+@import "comm/comm.wxss"; 
+@import "project/project.wxss";  
+
+.color-skin1 {
+	color: #2dcbc8 !important;
+}
+
+.bg-skin1,
+.after-skin1:after {
+	background-color: #2dcbc8 !important;
+	color: #fff !important;
+}
+
+.border-skin1 {
+	border-color: #2dcbc8 !important;
+}
+
+
+
+/*非分包菜单*/
+
+.tab-bar-home{
+	position: fixed;
+	top:50rpx;
+	left:20rpx;
+	width:50rpx;
+	height:50rpx;
+	z-index: 999999;
+	border-radius: 50%;
+	background:#fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	opacity: .8;
+}
+
+.tab-bar-home text{
+	font-size:36rpx;
+}
+
+.tab-bar {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 48px;
+	background: #fefefe;
+	display: flex;
+	padding-bottom: env(safe-area-inset-bottom);
+	z-index: 99999;
+}
+
+.tab-bar-border {
+	background-color: rgba(0, 0, 0, 0.33);
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 1px;
+	transform: scaleY(0.5);
+}
+
+.tab-bar-item {
+	flex: 1;
+	text-align: center;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-direction: column;
+	position: relative;
+	padding-top: 10rpx;
+}
+
+.tab-bar-item .tab-icon {
+	width: 48rpx;
+	height: 48rpx;
+	margin-bottom: 2rpx;
+}
+
+.tab-bar-item .tab-text {
+	font-size: 24rpx!important;
+	color: #999;
+}
+
+.tab-bar-item .tab-text-cur { 
+	color: #2dcbc8;
+}

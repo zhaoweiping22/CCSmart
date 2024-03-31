@@ -1,0 +1,26 @@
+<template name="menuTpl">
+	<view wx:if="{{returnHome}}" class="tab-bar-home" bindtap="url" data-type="relaunch" data-url="/pages/HOME_home/home">
+		<text class="icon-homefill color-skin1"></text>
+	</view>
+	<view class="tab-bar" wx:if="{{setup.SETUP_IS_SUB}}">  
+		<view class="tab-bar-border"></view>
+		<view class="tab-bar-item" bindtap="url" data-url="/school/pages/index/index_home">
+			<image class="tab-icon" src="/school/images/tabbar/home{{curMenu=='index_home'?'_cur':''}}.png"></image>
+			<view class="tab-text {{curMenu=='index_home'?'tab-text-cur':''}}" >首页</view>
+	</view>
+		<view class="tab-bar-item" bindtap="url" data-url="/school/pages/index/service">
+			<image class="tab-icon" src="/school/images/tabbar/service{{curMenu=='service'?'_cur':''}}.png"></image>
+			<view class="tab-text {{curMenu=='service'?'tab-text-cur':''}}" >服务</view>
+		</view>
+		<view class="tab-bar-item" bindtap="url" data-url="/school/pages/info/info_home">
+			<image class="tab-icon" src="/school/images/tabbar/flow{{curMenu=='info_home'?'_cur':''}}.png"></image>
+			<view class="tab-text {{curMenu=='info_home'?'tab-text-cur':''}}" >互动</view>
+		</view>
+		<view class="tab-bar-item" bindtap="url" data-url="/school/pages/my/index/my_index">
+			<image class="tab-icon" src="/school/images/tabbar/my{{curMenu=='my_index'?'_cur':''}}.png"></image>
+			<view class="tab-text {{curMenu=='my_index'?'tab-text-cur':''}}" >个人中心</view>
+		</view>
+	 
+
+	</view>
+</template>

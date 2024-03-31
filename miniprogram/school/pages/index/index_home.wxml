@@ -1,0 +1,123 @@
+<view class="main main-home">
+
+	<view class="upper">
+		<view class="top-upper">
+			<view class="top-upper-title">首页</view>
+		</view>
+
+		<!--menu1 begin-->
+		<view class="comm-list grid col-4 no-border shadow comm-list-menu1" style="margin-top:{{-360+customBar}}rpx;">
+			<view class="item-title">常见应用</view>
+			<view class="item" bindtap="url" data-url="../news/news_index?cate=0">
+				<view class="item-circle bg-pink">
+					<image src="../../images/menu/board.png"></image>
+				</view>
+				<text>学校公告</text>
+			</view>
+			<view class="item" bindtap="url" data-url="../news/news_index?cate=1">
+				<view class="item-circle bg-blue">
+					<image src="../../images/menu/fenguang.png"></image>
+				</view>
+				<text>服务通知</text>
+			</view>
+
+			<view class="item" bindtap="url" data-url="../news/news_index?cate=2">
+				<view class="item-circle bg-red">
+					<image src="../../images/menu/xinwen.png"></image>
+				</view>
+				<text>校园新闻</text>
+			</view>
+
+			<view class="item" bindtap="url" data-url="../news/news_index?cate=3">
+				<view class="item-circle bg-blue">
+					<image src="../../images/menu/fenguang.png"></image>
+				</view>
+				<text>校园风光</text>
+			</view> 
+
+		  
+			<view class="item" bindtap="url" data-url="../news/news_index?cate=4">
+				<view class="item-circle bg-orange">
+					<image src="../../images/menu/huodong.png"></image>
+				</view>
+				<text>校园活动</text>
+			</view>
+
+			<view class="item" bindtap="url" data-url="../news/news_index?cate=5">
+				<view class="item-circle bg-yellow">
+					<image src="../../images/menu/xiaoli.png"></image>
+				</view>
+				<text>校历</text>
+			</view> 
+
+			<view class="item" bindtap="url" data-url="../news/news_index?cate=7">
+				<view class="item-circle bg-brown">
+					<image src="../../images/menu/shiwu.png"></image>
+				</view>
+				<text>失物招领</text>
+			</view>
+
+
+			<view class="item" bindtap="url" data-url="service">
+				<view class="item-circle item-circle-plus">
+					<image src="../../images/menu/plus.png"></image>
+				</view>
+				<text>更多应用</text>
+			</view>
+
+		</view>
+		<!--menu1 END -->
+
+
+	<!--news begin-->
+	<view class="comm-list grid no-border shadow">
+			<view class="item-title">
+				<view>学校公告</view>
+				<view class="title-sub"  bindtap="url" data-url="../news/news_index?cate=1">服务通知</view>
+				<view class="title-sub" bindtap="url" data-url="../info/info_home">互动消息</view>
+			</view>
+			<view class="news-list">
+				<view wx:if="{{!list}}">加载中...</view>
+				<block wx:for="{{list}}" wx:key="key"> 
+					<view class="news-list-item"  bindtap="url" data-url="../news/news_detail?id={{item._id}}">
+						<block wx:if="{{item.NEWS_PIC}}">
+							<image  mode="aspectFill" src="{{item.NEWS_PIC}}"> 
+							</image>
+							<view class="redhot"></view>
+						</block>
+						<view class="news-list-item-right">
+							<text class="text-cut headline">{{item.NEWS_TITLE}}</text>
+							<text class="date">{{item.NEWS_ADD_TIME}}</text>
+						</view> 
+					</view> 
+					<view class="line"></view>
+				</block>
+			</view>
+
+  
+
+		</view>
+		<!--news END --> 
+
+		 
+
+	</view>
+
+	<view class="main-list">
+
+	</view>
+
+	<import src="../../ccmini-tpls/public/footer_tpl.wxml" />
+	<template is="footerTpl" data="{{page:'index_home', setup}}" />
+</view>
+
+
+<!--回页首 begin-->
+<import src="../../ccmini-tpls/public/top_tpl.wxml" />
+<template is="topTpl" data="{{topBtnShow,bottom:30}}" />
+<!--回页首 end-->
+
+
+
+<import src="../../ccmini-tpls/public/menu_tpl.wxml" />
+<template is="menuTpl" data="{{setup, returnHome:true,curMenu:'index_home'}}" />

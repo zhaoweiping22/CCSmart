@@ -1,0 +1,72 @@
+{
+	"pages": [
+		"school/pages/index/index_home",
+		"school/pages/about/about",
+		"school/pages/about/hint",
+		"school/pages/my/index/my_index",
+		"school/pages/register/reg_step1",
+		"school/pages/register/reg_step2",
+		"school/pages/register/reg_step3",
+		"school/pages/my/base/my_base",
+		"school/pages/my/reload/my_reload",
+		"school/pages/search/search",
+		"school/pages/info/info_index",
+		"school/pages/info/info_add",
+		"school/pages/info/info_detail",
+		"school/pages/info/info_edit",
+		"school/pages/my/info/my_info",
+		"school/pages/admin/info/admin_info_list",
+		"school/pages/admin/user/admin_user_list",
+		"school/pages/admin/user/admin_user_detail",
+		"school/pages/admin/index/admin_login",
+		"school/pages/admin/index/admin_home",
+		"school/pages/admin/news/admin_news_list",
+		"school/pages/admin/news/admin_news_add",
+		"school/pages/admin/news/admin_news_edit",
+		"school/pages/news/news_index",
+		"school/pages/news/news_detail",
+		"school/pages/admin/setup/admin_setup",
+		"school/pages/index/service",
+		"school/pages/user/user_detail",
+		"school/pages/info/info_home"
+	],
+	"window": {
+		"backgroundColor": "#f1f1f1",
+		"backgroundTextStyle": "light",
+		"navigationBarBackgroundColor": "#ffffff",
+		"navigationBarTitleText": "CC微校园",
+		"navigationBarTextStyle": "black"
+	},
+	"tabBar": {
+		"backgroundColor": "#fefefe",
+		"color": "#999",
+		"selectedColor": "#000000", 
+		"list": [
+			{
+				"pagePath": "school/pages/index/index_home",
+				"text": "首页",
+				"iconPath": "/school/images/tabbar/home.png",
+				"selectedIconPath": "/school/images/tabbar/home_cur.png"
+			},
+			{
+				"pagePath": "school/pages/index/service",
+				"text": "服务",
+				"iconPath": "/school/images/tabbar/service.png",
+				"selectedIconPath": "/school/images/tabbar/service_cur.png"
+			},
+			{
+				"pagePath": "school/pages/info/info_home",
+				"text": "互动",
+				"iconPath": "/school/images/tabbar/flow.png",
+				"selectedIconPath": "/school/images/tabbar/flow_cur.png"
+			},
+			{
+				"pagePath": "school/pages/my/index/my_index",
+				"text": "我的",
+				"iconPath": "/school/images/tabbar/my.png",
+				"selectedIconPath": "/school/images/tabbar/my_cur.png"
+			}
+		]
+	},
+	"sitemapLocation": "sitemap.json"
+}

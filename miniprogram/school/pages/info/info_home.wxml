@@ -1,0 +1,32 @@
+<view class="wall">
+	<view class="item-love bg-red" bindtap="url" data-url="info_index?cate=0">
+		<text class="icon-like" style="font-size:130rpx" />
+		<text>表白墙</text>
+	</view>
+
+	<view class="item-faq bg-blue" bindtap="url" data-url="info_index?cate=1"> 
+		<text class="icon-question" style="font-size:50rpx;margin-bottom:10rpx" />
+		<text>课后回答</text>
+	</view>
+
+	<view class="item-photo bg-green" bindtap="url" data-url="info_index?cate=3"> 
+		<text class="icon-pic" style="font-size:100rpx;margin-bottom:10rpx" />
+		<text>表白照片</text>
+	</view>
+
+	<view class="item-study bg-orange" bindtap="url" data-url="info_index?cate=2">
+		<text class="icon-pic" style="font-size:100rpx;margin-bottom:10rpx" />
+		<text>课堂印象</text>
+	</view>
+
+	<view class="item-pink bg-pink"> 
+	</view>
+
+	<view class="item-olive bg-olive"> 
+	</view>
+	 
+</view>
+
+
+<import src="../../ccmini-tpls/public/menu_tpl.wxml" />
+<template is="menuTpl"  data="{{setup, curMenu:'info_home'}}" />

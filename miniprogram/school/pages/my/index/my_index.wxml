@@ -1,0 +1,132 @@
+<view class="main main-my-index main-skin1">
+	<!--top area begin-->
+	<view class="user  bg-skin1">
+		<!--share begin-->
+		<button open-type="share" class="user-share text-darkgreen color-skin1 btn-share bg-white clearbtn">
+			<text class="icon-share"></text>
+		</button>
+		<!--share END-->
+
+		<view class="school-cover">
+			 
+		</view>
+		<view class="user-bar">
+			<view  class="avatar round border-skin1" wx:if="{{user.USER_PIC}}">
+				<image model="aspectFit" class="avatar xl round bg-gray" src="{{user.USER_PIC}}"></image>
+				<view class="tag badge bg-red icon-female" wx:if="{{user.USER_SEX==2}}"></view>
+				<view class="tag badge bg-blue icon-male" wx:if="{{user.USER_SEX==1}}"></view>
+			</view>
+
+			<view class="avatar xl round bg-gray" wx:if="{{!user.USER_PIC}}" catchtap="url"
+				data-url="../../register/reg_step1">
+				<open-data class="avatar-open" type="userAvatarUrl"></open-data>
+			</view>
+
+			<view class="detail" wx:if="{{user.USER_NAME}}">
+				<view class="name text-cut">{{user.USER_NAME}} <text style="font-weight:normal"
+						class="text-s margin-left-xs">{{user.USER_ITEM}}</text></view>
+				<view class="desc">
+					<view wx:if="{{user.USER_STATUS==1}}" class="tag small round bg-green">普通用户</view>
+					<view wx:if="{{user.USER_STATUS==8}}" class="tag small round bg-yellow">VIP用户</view>
+					<view wx:if="{{user.USER_STATUS==9}}" class="tag small round bg-orange">异常用户</view>
+					<view wx:if="{{user.USER_STATUS==0}}" class="tag small round bg-red light">待审核用户</view>
+				</view>
+			</view>
+
+			<view class="detail" wx:if="{{!user.USER_NAME}}" bindtap="url" data-url="../../register/reg_step1">
+				<view class="name">注册 / 登录</view>
+				<view class="desc">
+					<view class="text-white">注册马上使用更多功能</view>
+				</view>
+			</view>
+		</view>
+
+	</view>
+	<!--top area end-->
+
+	<!--down area begin-->
+	<view class="down">  
+
+		<!--act begin -->
+		<view class="comm-list menu card-menu margin-top shadow radius">
+			<view class="item arrow" bindtap="url" data-url="../../my/base/my_base">
+				<view class="content">
+					<text class="icon-writefill item-icon text-red"></text>
+					<text class="text-black">修改登记资料</text>
+				</view>
+			</view>
+
+			<view class="item arrow" bindtap="url" data-url="../../my/info/my_info">
+				<view class="content">
+					<text class="icon-newshotfill item-icon text-green"></text>
+					<text class="text-black">我发布的互动</text>
+				</view>
+			</view>
+
+			<view class="item arrow" bindtap="url" data-type="wait">
+				<view class="content">
+					<text class="icon-activityfill item-icon text-pink"></text>
+					<text class="text-black">我的成绩表</text>
+				</view>
+			</view>
+
+			<view class="item arrow" bindtap="url" data-type="wait">
+				<view class="content">
+					<text class="icon-countdownfill item-icon text-purple"></text>
+					<text class="text-black">我的考勤</text>
+				</view>
+			</view>
+
+		</view>
+		<!--act end -->
+
+
+		<!--sys begin -->
+		<view class="comm-list menu card-menu margin-top   shadow radius">
+			<view class="item arrow">
+				<button class="btn content" open-type="contact">
+					<text class="icon-service item-icon text-orange"></text>
+					<text class="text-black">联系客服</text>
+				</button>
+			</view>
+
+			<view class="item arrow" bindtap="url" data-url="../../about/about">
+				<view class="content">
+					<text class="icon-info item-icon text-orange"></text>
+					<text class="text-black">关于我们</text>
+				</view>
+			</view>
+
+
+		</view>
+
+		<view class="comm-list menu card-menu margin-top margin-bottom-xl shadow radius">
+			<view class="item arrow" bindtap="bindSetTap">
+				<view class="content">
+					<text class="icon-settings item-icon text-red"></text>
+					<text class="text-black">设置</text>
+				</view>
+			</view>
+
+			<view class="item arrow" bindtap="url" data-url="../../admin/index/admin_login">
+				<view class="content">
+					<text class="icon-settingsfill item-icon text-red"></text>
+					<text class="text-black">后台管理</text>
+				</view>
+			</view>
+
+
+		</view>
+		<!--sys end -->
+
+	</view>
+	<!--down area end-->
+
+	<import src="../../../ccmini-tpls/public/footer_tpl.wxml" />
+	<template is="footerTpl" data="{{page:'my_index', setup}}" />
+
+</view>
+
+
+<import src="../../../ccmini-tpls/public/menu_tpl.wxml" />
+<template is="menuTpl"  data="{{setup, returnHome:true, curMenu:'my_index'}}" />
